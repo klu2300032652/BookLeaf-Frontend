@@ -11,7 +11,7 @@ FROM tomcat:9-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy React build output into Tomcat webapps
-COPY --from=build-stage /app/dist /usr/local/tomcat/webapps/portfolio
+COPY --from=build-stage /app/dist /usr/local/tomcat/webapps/bookleaf
 
-EXPOSE 8085
+EXPOSE 8084
 CMD ["catalina.sh", "run"]
